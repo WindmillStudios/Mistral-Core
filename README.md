@@ -1,13 +1,13 @@
-# Mistral Engine
+# Mistral Core
 
 ![C++ Standard](https://img.shields.io/badge/C%2B%2B-20-blue.svg?style=flat&logo=c%2B%2B)
 ![License](https://img.shields.io/badge/License-Zlib-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
 
-**Mistral** is a modern, modular, and lightweight Game Engine core written in **C++20**. Built on top of the robust **Raylib** framework, it provides a flexible Component-based architecture and a hierarchical Scene Graph, designed to serve as the technological foundation for interactive tools and games.
+**Mistral** is a modern, modular, and lightweight Game Engine core written in **C++20**. Built on top of the robust [**Raylib**](https://github.com/raysan5/raylib) framework, it provides a flexible Component-based architecture and a hierarchical Scene Graph, designed to serve as the technological foundation for interactive tools and games.
 
 > **Note:** This repository contains the **Core Framework** library.
-> If you are looking for the visual editor, please visit the [Mistral Editor](https://github.com/Windmill-Studio/Mistral-Editor) repository.
+> If you are looking for the visual editor, please visit the [Mistral Editor](https://github.com/WindmillStudios/Mistral-Editor) repository.
 
 ## ✨ Key Features
 
@@ -17,7 +17,7 @@
 * **Render Abstraction:** Decoupled rendering logic via `IRenderPipeline`, allowing custom rendering strategies.
 * **Resource Management:** Centralized and efficient loading for Textures, Models, Audio, and Fonts.
 * **Math Library:** Integrated wrappers for Vectors, Matrices, and Quaternions ensuring seamless compatibility.
-* **ImGui Integration:** Native support for **rlImGui**, making it easy to build debug tools and custom UIs.
+* **ImGui Integration:** Native support for **ImGui**, making it easy to build debug tools and custom UIs.
 
 ## 📦 Installation
 
@@ -28,13 +28,11 @@ Add the following to your project's `CMakeLists.txt`:
 ```cmake
 include(FetchContent)
 
-# 1. Fetch Mistral Core
 FetchContent_Declare(
     Mistral
-    GIT_REPOSITORY [https://github.com/Windmill-Studio/Mistral-Core.git](https://github.com/Windmill-Studio/Mistral-Engine.git)
-    GIT_TAG        main  # Use a specific tag (e.g., v1.0) for stability
+    GIT_REPOSITORY https://github.com/WindmillStudio/Mistral-Core.git
+    GIT_TAG        main
 )
 FetchContent_MakeAvailable(Mistral)
 
-# 2. Link against your target
-target_link_libraries(YourGameTarget PRIVATE Mistral)
+target_link_libraries(${PROJECT_NAME} PRIVATE Mistral)
