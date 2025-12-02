@@ -30,7 +30,7 @@ include(FetchContent)
 
 FetchContent_Declare(
     Mistral
-    GIT_REPOSITORY https://github.com/WindmillStudio/Mistral-Core.git
+    GIT_REPOSITORY https://github.com/WindmillStudios/Mistral-Core.git
     GIT_TAG        main
 )
 FetchContent_MakeAvailable(Mistral)
