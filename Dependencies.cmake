@@ -1,5 +1,7 @@
 include(FetchContent)
 
+# .clang-format
+
 # raylib
 FetchContent_Declare(
 		raylib
