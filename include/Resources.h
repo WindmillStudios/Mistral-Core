@@ -43,8 +43,4 @@ namespace Mistral
 	Font& GetFont(const std::filesystem::path& path);
 
 	const std::filesystem::path& GetExecutablePath();
-
-	const std::filesystem::path& GetResourcesPath();
-
-	const std::filesystem::path& GetEditorResourcesPath();
 } // namespace Mistral

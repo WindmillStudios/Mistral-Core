@@ -154,23 +154,3 @@ const std::filesystem::path& Mistral::GetExecutablePath()
 
 	return executablePath;
 }
-
-const std::filesystem::path& Mistral::GetResourcesPath()
-{
-	static std::filesystem::path resourcesPath;
-	if (resourcesPath.empty())
-	{
-		resourcesPath = GetExecutablePath() / "game_resources";
-	}
-	return resourcesPath;
-}
-
-const std::filesystem::path& Mistral::GetEditorResourcesPath()
-{
-	static std::filesystem::path editorResourcesPath;
-	if (editorResourcesPath.empty())
-	{
-		editorResourcesPath = GetExecutablePath() / "editor_resources";
-	}
-	return editorResourcesPath;
-}
